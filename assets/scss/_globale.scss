@@ -1,0 +1,74 @@
+// Px To Rem
+@function rem($Value) {
+  $remValue: $Value;
+  $remValue: ($Value / 16) + rem;
+  @return $remValue;
+}
+
+$primary-Font: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+$primary-Background: #f0f0f0;
+$icon-Color: #656565;
+$icon-Background-color: #e4e4e4;
+$active-Color: #1b75e5;
+$sidebar-Width: rem(360);
+$feed-Width: rem(680);
+$primary-Padding: rem(10);
+$bg-hover: #6565652f;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primary-Background;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  font-family: $primary-Font;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin component-box($margin: unset, $padding: unset, $radius: unset) {
+  background-color: #ffffff;
+  margin: rem(10) 0;
+  padding: rem(15);
+  border-radius: rem(10);
+  -webkit-border-radius: rem(10);
+  -moz-border-radius: rem(10);
+  -ms-border-radius: rem(10);
+  -o-border-radius: rem(10);
+  box-shadow: 0 2px 2px #00000020;
+}
+
+.page-content {
+  &__right,
+  &__left {
+    .wrapper {
+      position: sticky;
+      top: 80px;
+    }
+  }
+}
+.features{
+  position: sticky;
+  top: 80px;
+}

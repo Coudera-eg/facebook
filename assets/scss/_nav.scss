@@ -1,0 +1,239 @@
+nav,
+.nav {
+  background-color: white;
+  @include flex(space-between, center);
+  padding: $primary-Padding;
+  box-shadow: 0 rem(3) rem(8) #0000000d;
+  height: rem(56);
+  position: fixed;
+  width: 100%;
+  z-index: 111111;
+
+  &__left {
+    flex: 25% 0 0;
+    max-width: $sidebar-Width;
+    display: flex;
+    
+
+    img {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      top: -1px;
+    }
+
+    a.user-pop {
+      position: absolute;
+      left: 3px;
+      top: 59px;
+      background-color: #2a2121cc;
+      font-size: 15px;
+      font-weight: 400;
+      color: #f1f1e7;
+      font-family: sans-serif;
+      padding: 6px 13px;
+      border-radius: 7px;
+      transform: scale(0, 0);
+      -webkit-transform: scale(0, 0);
+      -moz-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+      -o-transform: scale(0, 0);
+      cursor: pointer;
+    }
+
+    .user-icons:hover a.user-pop {
+      transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+    }
+
+    .facebook-icons {
+      display: flex;
+      margin-top: 5px;
+
+      &__icon-user {
+        position: absolute;
+        position: absolute;
+        top: 2.25rem;
+        left: 0.7rem;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .notification-pop {
+        position: absolute;
+        left: 40px;
+        top: 59px;
+        background-color: #2a2121cc;
+        font-size: 15px;
+        font-weight: 400;
+        color: #f1f1e7;
+        font-family: sans-serif;
+        padding: 6px 13px;
+        border-radius: 7px;
+        transform: scale(0, 0);
+        -webkit-transform: scale(0, 0);
+        -moz-transform: scale(0, 0);
+        -ms-transform: scale(0, 0);
+        -o-transform: scale(0, 0);
+        cursor: pointer;
+      }
+
+      .facebook-icons__icon:hover .notification-pop {
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+      }
+
+      .ri-arrow-down-s-line {
+        background-color: $icon-Background-color;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border: 1px solid white;
+      }
+
+      .messenger-icon:hover .messenger-pop {
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+      }
+
+      &__icon {
+        color: black;
+        padding: rem(8);
+        cursor: pointer;
+
+        .messenger-pop {
+          position: absolute;
+          left: 84px;
+          top: 59px;
+          background-color: #2a2121cc;
+          font-size: 15px;
+          font-weight: 400;
+          color: #f1f1e7;
+          font-family: sans-serif;
+          padding: 6px 13px;
+          border-radius: 7px;
+          transform: scale(0, 0);
+          -webkit-transform: scale(0, 0);
+          -moz-transform: scale(0, 0);
+          -ms-transform: scale(0, 0);
+          -o-transform: scale(0, 0);
+          cursor: pointer;
+        }
+
+        .facebook-icons__icon {
+          margin-top: 2px;
+        }
+
+        .facebook-icons__icon:hover .icon-notification {
+          opacity: 1;
+        }
+
+        i {
+          background-color: $icon-Background-color;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          padding: rem(10);
+          font-size: rem(20);
+          transition: background-color 0.1s;
+          -webkit-transition: background-color 0.1s;
+          -moz-transition: background-color 0.1s;
+          -ms-transition: background-color 0.1s;
+          -o-transition: background-color 0.1s;
+        }
+
+        i:hover {
+          background-color: #d1cfcf;
+        }
+
+        .num {
+          position: absolute;
+          background-color: red;
+          color: white;
+          font-weight: 600;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          font-size: 10px;
+          top: -7px;
+          margin-top: 10px;
+          line-height: 2;
+
+          span {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__middle {
+    flex: 42% 0 0;
+    max-width: $feed-Width;
+
+    .input-box__searsh {
+      display: flex;
+
+      label {
+        width: 100%;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background-color: #efefef;
+        width: inherit;
+        height: rem(40);
+        padding-right: rem(35);
+        border-radius: rem(20);
+        -webkit-border-radius: rem(20);
+        -moz-border-radius: rem(20);
+        -ms-border-radius: rem(20);
+        -o-border-radius: rem(20);
+        font-size: rem(16);
+      }
+
+      input:hover {
+        background-color: $bg-hover;
+      }
+
+      .ri-search-2-line {
+        color: $icon-Color;
+        margin-left: -1.8rem;
+        color: #656565;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+
+  &__right {
+    flex: 25% 0 0;
+    max-width: $sidebar-Width;
+    background-color: transparent;
+
+    .facebook-logo {
+      display: flex;
+      justify-content: flex-end;
+      margin: -11px;
+    }
+  }
+}

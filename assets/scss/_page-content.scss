@@ -1,0 +1,19 @@
+.page-content {
+  @include flex(space-between, top);
+  padding: $primary-Padding;
+
+  &__left {
+    flex: 25% 0 0;
+    max-width: 24rem;
+  }
+
+  &__middle {
+    flex: 40% 0 0;
+    max-width: 65.5rem;
+  }
+
+  &__right {
+    flex: 25% 0 0;
+    max-width: $sidebar-Width;
+  }
+}
